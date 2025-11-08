@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from collections import defaultdict
-from datetime import datetime
-import csv
 import sys
 
 def ask(prompt):
@@ -60,16 +58,6 @@ def main():
     print(f"{'Groceries:':15} {groceries:8.2f}")
     if groceries < 0:
         print("Warning: allocated more than total!")
-
-    resp = ask("\nSave breakdown to CSV? (y/N): ").strip().lower()
-    if resp == 'y':
-        fname = f"spend_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
-        with open(fname, 'w', newline='') as f:
-            w = csv.writer(f)
-            w.writerow(['category','amount'])
-            for c, v in cats.items():
-                w.writerow([c, f"{v:.2f}"])
-        print("Saved to", fname)
 
 if __name__ == '__main__':
     main()
