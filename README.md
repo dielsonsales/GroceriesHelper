@@ -9,13 +9,13 @@ You can download the `main.py` file using a command-line tool like `curl` or `wg
 ### Using curl
 
 ```bash
-curl -o main.py https://raw.githubusercontent.com/user/repo/main/main.py
+curl -o main.py https://raw.githubusercontent.com/dielsonsales/GroceriesHelper/refs/heads/main/main.py
 ```
 
 ### Using wget
 
 ```bash
-wget -O main.py https://raw.githubusercontent.com/user/repo/main/main.py
+wget -O main.py https://raw.githubusercontent.com/dielsonsales/GroceriesHelper/refs/heads/main/main.py
 ```
 
 ## How to run
@@ -23,5 +23,5 @@ wget -O main.py https://raw.githubusercontent.com/user/repo/main/main.py
 Once downloaded, you can run the script using:
 
 ```bash
-python main.py
+python3 main.py
 ```
